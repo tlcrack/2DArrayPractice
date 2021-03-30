@@ -1,10 +1,8 @@
-package _03_Intro_to_2D_Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class _02_2DArrayPracticeTest {
+class PracticeTest {
     @Test
     void test_1_Init1() {
         Integer[][] p = new _02_2DArrayPractice().test1();
