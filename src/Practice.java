@@ -29,8 +29,9 @@ public class Practice {
      *          6, 7, 8
      */
     public Integer[][] test1() {
+        Integer[][] intArray = new Integer[3][3];
         
-        return null;
+        return intArray;
     }
     
     /*
@@ -39,8 +40,8 @@ public class Practice {
      *          "e", "f", "g", "e"
      */
     public String[][] test2() {
-        
-        return null;
+        String[][] letters = new String[2][4];
+        return letters;
     }
     
     /*
@@ -52,8 +53,8 @@ public class Practice {
      *          true, false
      */
     public Boolean[][] test3() {
-        
-        return null;
+        Boolean[][] areTheyTrue = new Boolean[4][2];
+        return areTheyTrue;
     }
     
     /*
