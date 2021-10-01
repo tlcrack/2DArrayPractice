@@ -53,7 +53,7 @@ public class Practice {
      *          true, false
      */
     public Boolean[][] test3() {
-        Boolean[][] areTheyTrue = new Boolean[4][2];
+        Boolean[][] areTheyTrue = new Boolean[5][2];
         return areTheyTrue;
     }
     
@@ -63,7 +63,10 @@ public class Practice {
      * 
      * int[][] grid = new int[2][3];
      * 
-     * 
+     * 		 col1 col2  col3
+     * 		  \/   \/    \/
+     * row1: {0    1     2}
+     * row2: {3    4     5}
      * 
      * Show your teacher the grid you created
      */
@@ -74,7 +77,12 @@ public class Practice {
      * 
      * Robot[][] robots = new Robot[4][2];
      * 
-     * 
+     * 		col1 col2
+     *       \/   \/
+     * row1:{0	  1}
+     * row2:{2    3}
+     * row3:{4    5}
+     * row4:{6    7}
      * 
      * Show your teacher the grid you created
      */
@@ -86,7 +94,7 @@ public class Practice {
     public Object test4() {
         Object[][] objects = { {null, null, null, null}, {null, null, null, new Object()} }; 
         
-        return null;
+        return objects[1][3];
     }
     
     /* Given the array of Objects below, return the element that is not null
@@ -96,7 +104,7 @@ public class Practice {
     public Object test5() {
         Object[][] objects = { {null, null, new Object(), null}, {null, null, null, null} }; 
         
-        return null;
+        return objects[0][2];
     }
     
     /*
@@ -105,8 +113,12 @@ public class Practice {
      */
     public Integer test6() {
         int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
+        int firstRowSum = 0;
+        for(int i = 0; i < nums[0].length; i++) {
+        	firstRowSum+=nums[0][i];
+        }
         
-        return null;
+        return firstRowSum;
     }
     
     /*
@@ -115,8 +127,12 @@ public class Practice {
      */
     public Integer test7() {
         int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
+        int secondRowSum = 0;
         
-        return null;
+        for(int i = 0; i < nums.length; i++) {
+        	secondRowSum += nums[i][1];
+        }
+        return secondRowSum;
     }
     
     /*
@@ -124,8 +140,11 @@ public class Practice {
      * specified row
      */
     public Integer getSumByRow(int[][] matrix, int row) {
-        
-        return null;
+        int sumOfRow = 0;
+        for(int i = 0; i < matrix[row].length; i++) {
+        	sumOfRow += matrix[row][i];
+        }
+        return sumOfRow;
     }
     
     /*
@@ -133,8 +152,11 @@ public class Practice {
      * specified column
      */
     public Integer getSumByColumn(int[][] matrix, int col) {
-        
-        return null;
+        int sumOfColumn = 0;
+        for(int i = 0; i < matrix.length; i++) {
+        	sumOfColumn += matrix[i][col];
+        }
+        return sumOfColumn;
     }
     
     /*
@@ -157,22 +179,38 @@ public class Practice {
      *    boundaries, return null.
      */
     public Integer getEastNeighbor(int[][] matrix, int row, int col) {
-        
-        return null;
+        try {
+        return matrix[row][col+1];
+        }
+        catch(Exception e) {
+        	return null;
+        }
     }
     
     public Integer getWestNeighbor(int[][] matrix, int row, int col) {
-        
-        return null;
+        try {
+        	return matrix[row][col-1];
+        }
+        catch(Exception e) {
+        	return null;
+        }
     }
     
     public Integer getNorthNeighbor(int[][] matrix, int row, int col) {
-        
-        return null;
+    	try {
+        	return matrix[row-1][col];
+        }
+        catch(Exception e) {
+        	return null;
+        }
     }
     
     public Integer getSouthNeighbor(int[][] matrix, int row, int col) {
-        
-        return null;
+    	try {
+        	return matrix[row+1][col];
+        }
+        catch(Exception e) {
+        	return null;
+        }
     }
 }
